@@ -1,0 +1,796 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni* 11';
+}
+
+body {
+    background-color: #f4f7fa;
+    padding-top: 110px; /* Adjusted for header (70px) + navbar (40px) */
+}
+
+/* Header Section */
+.header {
+    background-color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+    height: 70px;
+}
+
+.header.hidden {
+    display: none;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.school-name {
+  font-size: 20px;
+  color: #0a1630;
+
+  margin: 0;
+}
+
+
+.header .contact-info {
+    color: #0a1630;
+    font-size: 16px;
+}
+
+.header .contact-info a {
+    color: #0a1630;
+    text-decoration: none;
+}
+
+.header .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #0a1630;
+    padding: 15px 0;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 100;
+    height: 40px;
+}
+
+.navbar.fixed-top {
+    top: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f4d03f;
+}
+
+.menu-button {
+    display: none;
+    background-color: #0a1630;
+    color: white;
+    border: none;
+    padding: 4px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 690px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navbar ul.nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0a1630;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar ul.nav-links.show {
+        display: flex;
+    }
+
+    .navbar ul.nav-links li {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .navbar ul.nav-links li a {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background-color: #0a1630;
+        display: none;
+        padding-left: 15px;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .arrow {
+        float: right;
+    }
+}
+
+
+/* Learn More Section */
+
+.learn-more {
+  padding: 60px 15vw;
+  background-color: #e8f0fe;
+  text-align: center;
+}
+
+.learn-more h2 {
+  font-size: 36px;
+  color: #0a1630;
+  margin: 0 auto 20px auto;
+  text-align: left;
+  max-width: 1100px;
+}
+
+.learn-more p {
+  font-size: 18px;
+  color: #666;
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .learn-more {
+    padding: 40px 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .learn-more {
+    padding: 30px 6vw;
+  }
+}
+/* Sub-headings inside Learn More section */
+.learn-more h3 {
+  font-size: 24px;
+  color: #0a1630;
+  margin: 25px 0 15px;
+  font-weight: bold;
+  text-align: left;
+  max-width: 1100px;
+  text-decoration: underline;
+}
+
+/* Custom arrow list styling */
+.learn-more ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.learn-more ul li {
+  position: relative;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  padding-left: 25px; /* Space for arrow */
+  margin-bottom: 8px;
+}
+
+.learn-more ul li::before {
+  content: "\2192"; /* Unicode arrow → */
+  position: absolute;
+  left: 0;
+  color: #0a1630; /* Arrow color */
+  font-weight: bold;
+}
+
+/* Paragraphs under sub-sections */
+.learn-more p {
+  font-size: 18px;
+  color: #666;
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Fee Structure Download Button */
+.learn-more .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #f4d03f;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.learn-more .btn:hover {
+  background-color: #e6c200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .learn-more {
+    padding: 40px 10vw;
+  }
+  .learn-more h3 {
+    font-size: 22px;
+  }
+  .learn-more ul li,
+  .learn-more p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .learn-more {
+    padding: 30px 6vw;
+  }
+  .learn-more h3 {
+    font-size: 20px;
+  }
+  .learn-more ul li,
+  .learn-more p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* Rectangular Cards Section */
+.rectangular-section {
+    padding: 60px 20px;
+    background-color: #f4f7fa;
+    text-align: center; /* ensures heading is centered */
+}
+
+.rect-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+ .rectangular-section .section-heading {
+    font-size: 36px;
+    color: #0a1630;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+/* @media (max-width: 768px) {
+    .rectangular-section .section-heading {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rectangular-section .section-heading {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+} */ 
+
+
+.rect-card {
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.rect-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 15px auto;
+    object-fit: contain;
+    
+}
+
+.rect-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rect-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.rect-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0a1630;
+}
+
+.rect-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.rect-card a {
+    color: #4b5e9e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rect-card a:hover {
+    text-decoration: underline;
+}
+/* button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #f4d03f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e6c200;
+}
+/* Pastel Colors for Rectangular Cards */
+.rect-card:nth-child(1) {
+    background-color: white;
+}
+
+.rect-card:nth-child(2) {
+background-color: white;}
+
+.rect-card:nth-child(3) {
+background-color: white;}
+
+
+/* Footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    text-align: left;
+    gap: 20px;
+}
+
+/* Logo Column */
+.logo-column {
+    text-align: center;
+    border-right: none !important; /* Removes the right border */
+    flex: 0.8; /* Makes the column smaller so it hugs left */
+    align-items: flex-start; /* Aligns logo to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0; /* Remove extra left padding */
+    padding-right: 0 !important; /* removes extra space */
+
+}
+
+/* Logo Image */
+.footer-logo {
+    width: 90px;
+    margin-bottom: 8px;
+    align-self: flex-start; /* push logo to left inside column */
+}
+
+/* Quote under logo */
+.footer-quote {
+    max-width: 160px;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+    text-align: left; /* so it wraps naturally under logo */
+    margin-left: 0; /* remove auto-centering */
+}
+
+
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-column:last-child {
+    border-right: none;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #f4d03f;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f4d03f;
+}
+
+/* Location section styling */
+.location-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.map-thumbnail {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.map-thumbnail:hover {
+    transform: scale(1.05);
+}
+/* Map thumbnail container for magnifying glass overlay */
+.map-container {
+    position: relative;
+    display: inline-block;
+}
+
+.magnifier-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* So icon doesn't block clicks */
+}
+
+/* Show magnifier on hover */
+.map-container:hover .magnifier-icon {
+    opacity: 1;
+}
+
+
+.location-text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #0a1630;
+    color: white;
+    padding: 0;
+    margin-top: 40px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.footer-bottom {
+    padding-bottom: 20px; /* adds gap below */
+}
+
+/* Make location column wider and remove left border */
+.location-column {
+    flex: 2;
+    border-left: none;
+    margin-left: -80px;       /* reset overlap */
+    padding-left: 0 !important;   /* small gap between logo and map */
+} 
+
+
+/* for .location-column */
+@media (max-width: 1200px) {
+    .location-column {
+        margin-left: 0; /* stop pushing into logo */
+        padding-left: clamp(5px, 2vw, 20px); /* keep it aligned */
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 701px) {
+    .footer-column {
+        flex: 1; /* allow them to shrink and grow */
+        min-width: 0; /* stop locking the width */
+        padding-left: clamp(3px, 1vw, 15px);
+        padding-right: clamp(5px, 2vw, 20px);
+    }
+
+    .location-column {
+        flex: 2; /* keep location slightly wider */
+    }
+}
+    @media (max-width: 900px){
+        /* Slightly smaller text */
+    .footer-column h3 {
+        font-size: 18px;
+    }
+    .footer-column ul li {
+        font-size: 14px;
+    }
+     .footer-quote {
+        font-size: 14px; 
+}
+.footer-logo {
+        width: 70px;
+    }
+    }
+
+/* Responsive for smaller screens */
+
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column; /* stack all footer columns vertically */
+        align-items: center;
+        text-align: center;
+        gap: 30px; /* spacing between sections */
+    }
+
+    .footer-column {
+        width: 100%;
+        max-width: 500px;
+        border-right: none; /* remove side borders */
+        padding: 0 10px;
+    }
+    .location-column {
+        margin-left: 0;         /* remove the negative left margin */
+        padding-left: 10px !important; /* small padding to match others */
+    }
+
+    /* Stack map above address text */
+    .location-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Make map smaller on mobile */
+    .map-thumbnail {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+    }
+
+    /* Slightly smaller text */
+    .footer-column h3 {
+        font-size: 18px;
+    }
+    .footer-column ul li {
+        font-size: 14px;
+    }
+
+  /* Logo + Quote side-by-side */
+    .logo-column {
+        flex-direction: row;       /* place items side by side */
+        align-items: center;       /* vertically center them */
+        text-align: left;          /* align text to the left */
+        gap: 10px;                  /* small gap between logo & quote */
+    }
+       .footer-quote {
+        max-width: none;            /* allow text to flow freely */
+        font-size: 16px;            /* slightly smaller text */
+        margin: 0;                  /* remove top/bottom margins */
+    }
+        /* Make logo smaller and centered */
+    .footer-logo {
+        width: 80px;
+        margin-bottom: 0;           /* remove extra bottom gap */
+
+    }
+}
+
+
+
+/* Responsive Design overall */
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .header .contact-info {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        top: 100px;
+    }
+
+    .navbar.fixed-top {
+        top: 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+ .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  flex-wrap: nowrap;        /* Prevent items from wrapping */
+  white-space: nowrap;      /* Keep links in a single row */
+}
+  .navbar a {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+   
+  .navbar li {
+    margin: 0 10px;}
+    
+    .learn-more h2,
+    .photo-gallery h2,
+    .faq-section h2,
+    .rectangular-section h2.section-heading 
+     {
+        font-size: 27px;
+    }
+
+    .learn-more p,
+    .faq p {
+        font-size: 16px;
+    }
+
+    .rect-card {
+        width: 320px;
+        height: 270px;
+    }
+
+    .rect-card h2 {
+        font-size: 22px;
+    }
+
+    .rect-card p {
+        font-size: 16px;
+    }
+
+    
+  
+    body {
+        padding-top: 140px;
+    }
+.rect-icon{
+    width:50px;
+    height: 50px;
+}
+  
+}
+
+/* Dropdown styling */
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a1f44; /* match your navbar background */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.navbar ul li .dropdown-menu li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff30;
+}
+
+.navbar ul li .dropdown-menu li a:hover {
+    background-color: #ffffff20;
+}
+
+/* Show dropdown on hover for large screens */
+@media (min-width: 992px) {
+    .navbar ul li:hover > .dropdown-menu {
+        display: block;
+    }
+}
+/* Hidden by default for smaller screens */
+@media (max-width: 992px) {
+  .navbar ul li:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+
+.navbar .arrow {
+    font-size: 0.6em;
+    margin-left: 4px;
+}
+ 
+
+
+

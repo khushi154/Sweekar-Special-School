@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+   <header class="header">
+  <div class="logo-title">
+    <img src="../../logo.png" alt="School Logo" class="logo-img" />
+    <h1 class="school-name">SWEEKAR SPECIAL SCHOOL</h1>
+  </div>
+        <div class="contact-info">
+            <p><a href="tel:+1234567890">📞 +123 456 7890 </a> ||  <a href="mailto:school@example.com">  📧 school@example.com</a></p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+   <nav class="navbar">
+    <button class="menu-button" id="menu-button">☰ Menu</button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="../../About Us/AboutUs.html" class="dropdown-toggle">About Us <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-menu">
+                <li><a href="About Us/Introduction.html">Introduction</a></li>
+                <li><a href="About Us/Mission&Vision.html">Our Mission & Vision</a></li>
+                <li><a href="About Us/Principal.html">Principal's Message</a></li>
+            </ul>
+        </li>
+        <li><a href="../../Curriculum/Curriculum.html">Curriculum</a></li>
+        <li><a href="../Gallery.html">Gallery</a></li>
+        <li><a href="../../Programs/Programs.html">Programs</a></li>
+        <li><a href="../../Admissions/Admissions.html">Admissions</a></li>
+        <li><a href="../../Contact/Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <!-- Learn More Section -->
+    <section class="album" id="album">
+        <h2>School Album</h2>
+        <p>This album captures the everyday moments and special activities at our school.
+        </p><br>
+     <div class="gallery-container">
+  <div class="gallery-item"><img src="../../photos/reception.jpg" alt="Gallery Image 1" class="gallery-img"></div>
+  <div class="gallery-item"><img src="../../photos/study.jpg" alt="Gallery Image 2" class="gallery-img"></div>
+  <div class="gallery-item"><img src="../../photos/students.jpg" alt="Gallery Image 3" class="gallery-img"></div>
+  
+</div></section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span id="close-btn" class="close">&times;</span>
+  <a id="prev-btn" class="prev">&#10094;</a>
+  <img id="lightbox-img" class="lightbox-img">
+  <a id="next-btn" class="next">&#10095;</a>
+</div>
+
+  <!-- Rectangular Cards Section -->
+    <section class="rectangular-section">
+         <h2 class="section-heading">--- Our School Albums ---</h2>
+          <div class="rect-card-container">
+
+       
+            <!-- Album 2 -->
+    <div class="rect-card">
+      <a href="../Gallery/Trips.html">
+        <img src="../../photos/group manali.jpg" alt="School Trips" class="rect-icon">
+        <h2>School Trips</h2>
+      </a>
+    </div>
+
+    <!-- Album 3 -->
+    <!-- <div class="rect-card">
+      <a href="../Gallery/Festivals.html">
+        <img src="Gallery/Festivals/cover.jpg" alt="Festivals" class="rect-icon">
+        <h2>Festivals</h2>
+      </a>
+    </div> -->
+
+    <!-- Album 4 -->
+    <div class="rect-card">
+      <a href="../Gallery/ArtCraft.html">
+        <img src="../../photos/diya painting.jpg" alt="Art & Craft" class="rect-icon">
+        <h2>Art & Craft</h2>
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        
+        <!-- Logo -->
+        <div class="footer-column logo-column">
+            <img src="../../logo.png" alt="Sweekar Special School" class="footer-logo">
+                <p class="footer-quote">"Every Child Explores The World In Their Own Way."</p>
+
+            
+        </div>
+
+        <!-- Location -->
+        <div class="footer-column location-column"> 
+            <h3>Our Location</h3>
+            <div class="location-content">
+    <div class="map-container">
+        <a href="https://www.google.com/maps/place/Sweekar+Special+School/" target="_blank">
+            <img src="../../Admissions/map.png" alt="Sweekar Special School Location" class="map-thumbnail">
+            <div class="magnifier-icon">
+                <i class="fas fa-search-plus"></i>
+            </div>
+        </a>
+    </div>
+    <div class="location-text">
+        <p>
+            Sweekar Special School<br>
+            Road No. 12, XYZ Colony<br>
+            Hyderabad, Telangana, India
+        </p>
+    </div>
+</div>
+
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../About Us/AboutUs.html">About Us</a></li>
+                <li><a href="../../Curriculum/Curriculum.html">Curriculum</a></li>
+                <li><a href="../../Admissions/Admissions.html">Admissions</a></li>
+                <li><a href="../../Contact/Contact.html">Contact Us</a></li>
+                <li><a href="../Gallery.html">Gallery</a></li>
+                <li><a href="../../Programs/Programs.html">Programs</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact & Social -->
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+            <li>📧 Email: info@sweekarschool.org</li>
+            <li>📞 Phone: +91 98765 43210</li>
+            </ul></br>
+            <!-- <h3>Follow Us</h3>
+            <ul>
+            <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+            </ul> -->
+        </div>
+    </div>
+<p class="footer-bottom">© 2025 Sweekar Special School. All Rights Reserved.</p>
+</footer>
+
+
+
+
+    <CHATJS><script src="https://kit.fontawesome.com/a076d05399.js"></script></CHATJS>
+    <script src="scripts.js"></script>
+</body>
+</html>
