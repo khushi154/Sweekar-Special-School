@@ -47,26 +47,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Photo Gallery Lightbox
-const galleryImages = document.querySelectorAll('.gallery-img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.getElementById('close-btn');
 
-galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
+
+// Toggle main menu on small screens
+const menuButton = document.getElementById('menu-button');
+const navLinks = document.getElementById('nav-links');
+
+menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Toggle About Us dropdown in small screens
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+        if (window.innerWidth < 850) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
     });
-});
-
-closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
 });
